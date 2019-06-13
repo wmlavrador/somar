@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 body {
 	background:#EEEEEE !important;
@@ -124,7 +124,7 @@ body {
 	font-weight: 600;
 }
 .vlDiariaLabel {
-	font-size:11px;
+	font-size:9px;
 }
 
 

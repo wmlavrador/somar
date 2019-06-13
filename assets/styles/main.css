@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body {
+	background:#EEEEEE !important;
+}
+* {
+	font-family: "Open Sans"; 
+}
+
+/* Seção de Estilos Padrão */
+.menu>.col:nth-child(1), .menu>.col img {
+	color: black;
+	cursor:pointer;
+	font-weight: 600;
+}
+.menu>.col:nth-child(1):hover{
+	color:#E7816A;
+}
+
+.buttonMore {
+	font-size:12px;
+	color:#333;
+	background:#ddd;
+	border-radius:13px;
+	padding:5px 7px;
+	text-align:center;
+	cursor:pointer;
+}
+.buttonMore {
+	background:;
+}
+.titleSection {
+	font-size:21px;
+	color:#E7816A;
+}
+.subtitleSection {
+	font-size:13px;
+	color:#ccc;
+}
+.sectionHead {
+	height: 350px;
+	margin-bottom:50px; 
+	animation: mudarBackground 20s infinite; 
+}
+
+/* Seção de Pesquisa */
+#consultaPacotes {
+	height: calc(100% - 45px);
+}
+#consultaPacotes .formPesquisa {
+	background:white;
+	border-radius:40px;
+	padding:0px 0px 0px 45px;
+	min-width:50%;
+	max-width: 65%;
+	box-shadow: 0px 5px 16px 0px rgba(0,0,0, 0.3);
+}
+
+#consultaPacotes .submitReserva {
+    background: #E8816A;
+    padding: 20px 40px;
+	border-radius: 35px;
+	cursor:pointer;
+	color:white;
+	border:0;
+}
+#consultaPacotes .submitReserva:hover {
+	background:black;
+}
+
+.formPesquisa input[type='text'] {
+	border:0px;
+	font-size:16px;
+	color:#878787;
+	width: 100%;
+	cursor:pointer;
+}
+.formPesquisa input[type='text']:focus {
+	outline:none;
+}
+
+.formPesquisa label {
+	margin-bottom: 0 !important;
+	font-size:12px;
+	cursor:pointer;
+}
+
+/* Seção de Itens de Acomodações */
+.acomodacoesItem {
+	margin-left:10px;
+	min-width: 200px;
+	margin-top:50px;
+	max-width: 220px;
+	display: table;	
+}
+
+.acomodacoesItem:nth-child(first) {
+	margin-left:0;
+}
+.acomodacoesItem:nth-child(last){
+	margin-right: 0;
+}
+.itemHead {
+	margin-bottom:10px;
+}
+.itemBody {
+	height: 270px;
+	width:100%;
+	min-width: 200px;
+	background-size: 100% 100% !important;
+    background-position-y: center !important;
+}
+
+.itemBottom {
+	margin-top:10px;
+}
+.acomodacoesItem .itemTitle {
+	font-size:14px;
+	color:#4a4a4a;
+}
+.vlDiaria {
+	font-size:14px;
+	color:#5755FF;
+	font-weight: 600;
+}
+.vlDiariaLabel {
+	font-size:11px;
+}
+
+
+.contentInsta {
+	border-bottom:3px solid pink;
+	padding-top:10px;
+	width: 100%;
+	margin-bottom:20px;
+}
+
+.contentInsta .item { 
+
+}
+
+.menuVertical {
+	background:rgba(0,0,0, 0.3);
+	position:fixed;
+	z-index: 20;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	display: none;
+}
+
+.menuVertical ul.menu-list {
+	position: fixed;
+	top: 70px;
+	right: 0px;
+	list-style: none;
+	background:#000;
+	padding:20px 40px 20px 25px;
+	border-radius: 10px 0px 0px 10px;
+	height: 80vh;
+	width:250px;
+}
+
+.menuVertical ul.menu-list li {
+	padding:10px;
+}
+
+.menuVertical ul.menu-list li a{
+	padding-top:10px;
+	font-size:14px;
+	color:white;
+}
+
+.menuVertical ul.menu-list li a:hover {
+	color:orangered;
+	text-decoration: none;
+}
+.menuCancel {
+	display:none;
+	top: 16px;
+	z-index: 30;
+	right: 40px;
+	position: fixed;
+}
+
+.paginaCompra .detalhes {
+	color:#757575;
+}
+
+.footer {
+	margin-top:40px;
+}
+
+.footer .links a{
+	font-size:16px;
+	color:#006DD9;
+	margin-right: 40px;
+}
+.footer .links a:hover {
+	text-decoration: none;
+	color:#E7816A;
+}
+
+/* Seção de Animações */
+@keyframes mudarBackground {
+	0% {
+		background: url("../imgs/EXEMPLO2.png");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	20% {
+		background: url("../imgs/EXEMPLO2.png");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	30% {
+		background: url("../imgs/EXEMPLO2.png");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	40% {
+		background: url("../imgs/EXEMPLO3.png");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	50% {
+		background: url("../imgs/EXEMPLO3.png");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	60% {
+		background: url("../imgs/EXEMPLO3.png");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	70% {
+		background: url("../imgs/EXEMPLO4.png");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	80% {
+		background: url("../imgs/EXEMPLO4.png");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	90% {
+		background: url("../imgs/EXEMPLO4.png");
+		background-size:cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	100% {
+		background: url("../imgs/EXEMPLO4.png");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+}

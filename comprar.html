@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Agência de Viagens</title>
+	<link rel="stylesheet" href="assets/styles/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/styles/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles/viewslider.css">
+	<link rel="stylesheet" href="assets/styles/autocomplete.css">
+</head>
+<body>
+	
+	<div id="innerHeader">
+		<div class="full-container sectionHead position-relative">
+			<div class="container h-100">
+		
+				<div id="menuHeader" class="d-flex justify-content-between">
+					<div class="logo pull-left">
+						<a href="index.html"><img src="assets/imgs/logo.png"></a>
+					</div>
+		
+					<div class="menu pull-right row align-items-center">
+						<div class="col">MENU</div>
+						<div class="col position-relative">
+							<img src="assets/imgs/menu-humburger.png" alt="Menu de Opções" class="menuOpen">
+							<img src="assets/imgs/cancel.png" height="37" class="menuCancel">
+						</div>
+					</div>
+				</div>
+		
+				<div id="consultaPacotes" class="d-flex justify-content-center align-items-end">
+					<form class="formPesquisa row no-gutters" method="GET" action="comprar.html" style="z-index: 10;">
+						<div class="origem col mr-2">
+							<span><i><label for="origem">informar *</label></i></span>
+							<div>
+								<span><img src="assets/imgs/icon-localization.png" alt="" style="margin-left: -20px;"></span>
+								<span> <input id="origem" type="text" name="origem" required  placeholder="Origem"></span>
+							</div>
+						</div>
+						<div class="destino col mr-2 position-relative">
+							<span><i><label for="destino">visualizar *</label></i></span>
+							<div>
+								<span class="autocomplete"> <input type="text" name="destino" required id="destino" placeholder="Cidade Destino"></span>
+							</div>
+						</div>
+						<div class="datas col mr-2" data-target="#dataIda" data-toggle="datetimepicker">
+							<span><i><label for="dataIda">selecionar ida *</label></i></span>
+							<div>
+								<span> <input type="text" id="dataIda" name="dataIda" required data-target="#dataIda" class="datetimepicker-input"
+										placeholder="Data de Ida"></span>
+							</div>
+						</div>
+						<div class="datas col mr-2 " data-target="#dataRetorno" data-toggle="datetimepicker">
+							<span><i><label for="dataRetorno">selecionar volta</label></i></span>
+							<div>
+								<span> <input type="text" id="dataRetorno" required  name="dataRetorno" data-target="#dataRetorno"
+										class="datetimepicker-input" placeholder="Data de Retorno"></span>
+							</div>
+						</div>
+						<button type="submit" class="submitReserva">Buscar</button>
+					</form>
+				</div>
+		
+			</div>
+			<img src="assets/imgs/mask-background.png" alt="" class="img-fluid"
+				style="position:absolute; bottom:0; z-index: 1;">
+		</div>
+	</div>
+
+	<section>
+		<div class="container paginaCompra">
+			<div class="containerHead d-flex justify-content-between" >
+				<div class="titleSection">Reservando<div class="subtitleSection">mais detalhes sobre sua reserva</div></div>
+				<div class="titleBlue"></div>
+			</div>
+			<div class="row mt-5 mb-5">
+				<div class="col-6">
+					  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+						  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+						  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+						  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+						</ol>
+						<div class="carousel-inner">
+						  <div class="carousel-item active">
+							<img class="d-block w-100" src="https://picsum.photos/id/233/550/350" alt="Primeiro Slide">
+						  </div>
+						  <div class="carousel-item">
+							<img class="d-block w-100" src="https://picsum.photos/id/243/550/350" alt="Segundo Slide">
+						  </div>
+						  <div class="carousel-item">
+							<img class="d-block w-100" src="https://picsum.photos/id/143/550/350" alt="Terceiro Slide">
+						  </div>
+						</div>
+						<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+						  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						  <span class="sr-only">Anterior</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+						  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+						  <span class="sr-only">Próximo</span>
+						</a>
+					  </div>
+				</div>
+				<div class="col-6">
+					<div class="row">
+						<div class="containerHead d-flex justify-content-between" >
+							<div class="titleSection" >
+							<div style="color:#28a745;">Sobre sua Viagem</div>
+							<div class="subtitleSection">897 pessoas foram para <span class="recebeDestino"></span> conosco.</div></div>
+							<div class="titleBlue"></div>
+						</div>
+						
+						<div>
+							<div class="detalhes mt-2 mb-5" >
+								<i>Você está viajando para <span class="recebeDestino"></span>, saindo de <b><span class="recebeOrigem"></span></b>
+								<div class="valor">
+									no dia <b><span class="recebePartida"></span></b> <span style="display: none;" class="recebeRetorno">e retornando <b></b></span>
+								</div></i>
+							</div>
+
+							<div class="acomodacoes mb-5 d-flex align-items-center">
+								<span style="font-size:14px;">Deseja incluir uma hospedagem em <span class="recebeDestino"></span> ?</span>
+								<button type="button" class="btn ml-3 btn-sm btn-outline-warning" data-toggle="modal" data-target="#bigModalAcomodacoes">
+									escolher
+								</button>
+							</div>
+
+							<div class="mt-2 mb-5 recebeAcomodacao" >
+								
+								<b>Nenhuma hospedagem selecionada</b>
+							</div>
+
+							<div class="rodapeDetalhes mt-3 d-flex justify-content-between align-items-end">
+									
+									<div class="total"  style="color:#28a745;">
+										Total: <span class="recebeTotal">R$ 430,00</span> <span class="recebeValorHospedagem"></span><span class="recebeTotais"></span>
+									</div><div class="btn btn-sm btn-outline-success"><a href="https://pagseguro.com.br" style="text-decoration:none; color:inherit;">Pagar em um ambiente seguro</a></div>
+
+							</div>
+
+							
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<h4>Sobre <span class="recebeDestino"></span>:</h4>
+				<div class="descricao"></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Modal -->
+<div class="modal fade" id="bigModalAcomodacoes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="exampleModalLabel">Acomodações em <span class="recebeDestino"></span></h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body">
+				<div id="acomodacoesModal" class="row no-gutters">
+					<!-- recebe as acomodações via javascript -->
+				</div>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+	<section id="innerFooter">
+		<section>
+			<div class="container mt-5 mb-5">
+				<div class="containerHead d-flex justify-content-start" >
+					<img src="assets/imgs/icon-insta.png" style="max-height:35px; margin-right: 15px;"> 
+					<div class="titleSection">
+						#foramSoDePraia
+						<div class="subtitleSection">
+							últimas novidades do instagram
+						</div>
+					</div>					
+				</div>
+				<div class="clearfix"></div>
+				<div class="contentInsta row no-gutters">
+					<div class="item col">
+						<img src="https://picsum.photos/id/243/300/300" class="img-fluid">
+					</div>
+					<div class="item col">
+						<img src="https://picsum.photos/id/240/300/300" class="img-fluid">
+					</div>
+					<div class="item col">
+						<img src="https://picsum.photos/id/236/300/300" class="img-fluid">
+					</div>
+					<div class="item col">
+						<img src="https://picsum.photos/id/247/300/300" class="img-fluid">
+					</div>
+					<div class="item col">
+						<img src="https://picsum.photos/id/248/300/300" class="img-fluid">
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section>
+			<div class="footer container mt-5 d-flex justify-content-between">
+				<div class="links">
+					<a href="https://google.com.br" target="_blank">termos de privacidade</a>
+					<a href="mailto:equipesomar@somar.com.br">fale conosco</a>
+					<a href="https://google.com.br" target="_blank">termos de uso</a>
+				</div>
+				<div class="copyright">Copyright © todos direitos reservados à Somar</div>
+			</div>
+		</section>
+		
+		
+		<div class="menuVertical">
+			<ul class="menu-list">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#acomodacoes">Acomodações</a></li>
+				<li><a href="#consultaPacotes">Reservar</a></li>
+				<li><a href="mailto:equipesomar@somar.com.br">Fale Conosco</a></li>
+			</ul>
+		</div>
+	</section>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+	<script src="assets/scripts/lib/bootstrap.min.js"></script>
+	<script src="assets/scripts/lib/moment.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script src="assets/scripts/destinos.js"></script>
+
+	<script src="assets/scripts/main.js"></script>
+
+</body>
+</html>
